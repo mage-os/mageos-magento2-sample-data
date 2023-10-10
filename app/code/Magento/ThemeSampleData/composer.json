@@ -1,23 +1,27 @@
 {
-    "name": "magento/module-theme-sample-data",
-    "description": "N/A",
-    "require": {
-        "php": "~8.1.0||~8.2.0",
-        "magento/framework": "*",
-        "magento/module-theme": "*",
-        "magento/module-store": "*"
-    },
-    "type": "magento2-module",
-    "license": [
-        "OSL-3.0",
-        "AFL-3.0"
+  "name": "mage-os/module-theme-sample-data",
+  "description": "N/A",
+  "require": {
+    "php": "~8.1.0||~8.2.0",
+    "mage-os/framework": "1.0.1",
+    "mage-os/module-theme": "1.0.1",
+    "mage-os/module-store": "1.0.1"
+  },
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
     ],
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Magento\\ThemeSampleData\\": ""
-        }
+    "psr-4": {
+      "Magento\\ThemeSampleData\\": ""
     }
+  },
+  "version": "1.0.1",
+  "replace": {
+    "magento/module-theme-sample-data": "100.4.2"
+  }
 }
