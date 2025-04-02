@@ -57,7 +57,8 @@ class HeadStyle
 
     public function add($contentFile, $cssFile)
     {
-        $styleContent = preg_replace('/^\/\*[\s\S]+\*\//', '', file_get_contents($contentFile));
+        $styleContent = preg_replace('/^\/\*[\s\S]+\*\//', '',
+            file_get_contents($contentFile ?? ''));
         if (empty($styleContent)) {
             return;
         }

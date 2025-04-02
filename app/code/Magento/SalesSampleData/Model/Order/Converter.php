@@ -56,7 +56,7 @@ class Converter
         \Magento\Catalog\Model\ProductFactory $productFactory,
         \Magento\ConfigurableSampleData\Model\Product\ConverterFactory $productConverterFactory,
         \Magento\Eav\Model\Config $eavConfig,
-        Json $serializer = null
+        ?Json $serializer = null
     ) {
         $this->customerRepository = $customerAccount;
         $this->productFactory = $productFactory;

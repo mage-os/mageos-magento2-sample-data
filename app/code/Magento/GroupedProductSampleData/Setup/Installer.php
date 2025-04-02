@@ -29,7 +29,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function __construct(
         \Magento\GroupedProductSampleData\Model\Product $groupedProduct,
-        StoreManagerInterface $storeManager = null
+        ?StoreManagerInterface $storeManager = null
     ) {
         $this->groupedProduct = $groupedProduct;
         $this->storeManager = $storeManager ?: \Magento\Framework\App\ObjectManager::getInstance()

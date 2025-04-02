@@ -32,7 +32,7 @@ class Installer implements Setup\SampleData\InstallerInterface
      */
     public function __construct(
         \Magento\BundleSampleData\Model\Product $bundleProduct,
-        StoreManagerInterface $storeManager = null
+        ?StoreManagerInterface $storeManager = null
     ) {
         $this->bundleProduct = $bundleProduct;
         $this->storeManager = $storeManager ?: \Magento\Framework\App\ObjectManager::getInstance()

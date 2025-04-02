@@ -80,7 +80,7 @@ class Wishlist
                 if (!$wishlist->getId()) {
                     continue;
                 }
-                $productSkuList = explode("\n", $row['product_list']);
+                $productSkuList = explode("\n", $row['product_list'] ?? '');
                 $this->helper->addProductsToWishlist($wishlist, $productSkuList);
             }
         }

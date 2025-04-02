@@ -72,7 +72,7 @@ class Rule
         \Magento\Catalog\Model\ResourceModel\Category\CollectionFactory $categoryCollectionFactory,
         \Magento\Customer\Model\GroupFactory $groupFactory,
         \Magento\Store\Model\WebsiteFactory $websiteFactory,
-        Json $serializer = null
+        ?Json $serializer = null
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();
@@ -128,7 +128,7 @@ class Rule
         preg_match_all($regexp, $data, $matches);
         $replacement = null;
         foreach ($matches[1] as $matchedId => $matchedItem) {
-            $extractedData = array_filter(explode(",", $matchedItem));
+            $extractedData = array_filter(explode(",", $matchedItem ?? ''));
             foreach ($extractedData as $extractedItem) {
                 $separatedData = array_filter(explode('=', $extractedItem));
                 if ($separatedData[0] == 'url_key') {
