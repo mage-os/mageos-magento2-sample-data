@@ -165,7 +165,7 @@ class Converter
         if (is_array($value)) {
             return $value;
         }
-        if (false !== strpos($value, "\n")) {
+        if ($value !== null && false !== strpos($value, "\n")) {
             $value = array_filter(explode("\n", $value));
         }
         return !is_array($value) ? [$value] : $value;

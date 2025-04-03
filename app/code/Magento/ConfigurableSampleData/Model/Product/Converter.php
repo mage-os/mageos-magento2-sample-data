@@ -139,7 +139,7 @@ class Converter extends \Magento\CatalogSampleData\Model\Product\Converter
         $values = [];
         $prices = [];
         foreach ($valuesData as $item) {
-            $itemData = explode(';', $item);
+            $itemData = explode(';', $item ?? '');
             if (!empty($itemData[0])) {
                 $values[] = $itemData[0];
             }

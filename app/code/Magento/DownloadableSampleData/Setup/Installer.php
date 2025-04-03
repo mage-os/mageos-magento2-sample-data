@@ -44,7 +44,7 @@ class Installer implements Setup\SampleData\InstallerInterface
         Category $category,
         Attribute $attribute,
         Product $product,
-        StoreManagerInterface $storeManager = null
+        ?StoreManagerInterface $storeManager = null
     ) {
         $this->category = $category;
         $this->attribute = $attribute;

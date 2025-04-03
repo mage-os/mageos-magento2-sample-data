@@ -32,8 +32,8 @@ class Converter extends \Magento\CatalogSampleData\Model\Product\Converter
         \Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory $attributeCollectionFactory,
         \Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\CollectionFactory $attrOptionCollectionFactory,
         \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory,
-        \Magento\Downloadable\Api\Data\File\ContentInterfaceFactory $fileContentFactory = null,
-        Filesystem $filesystem = null
+        ?\Magento\Downloadable\Api\Data\File\ContentInterfaceFactory $fileContentFactory = null,
+        ?Filesystem $filesystem = null
     ) {
         parent::__construct(
             $categoryTreeFactory,

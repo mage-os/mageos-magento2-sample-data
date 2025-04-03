@@ -87,7 +87,7 @@ class Tax
         \Magento\Tax\Model\Calculation\RateFactory $taxRateFactory,
         \Magento\Framework\Api\SearchCriteriaBuilder $criteriaBuilder,
         \Magento\Framework\Api\FilterBuilder $filterBuilder,
-        \Magento\Directory\Model\ResourceModel\Region\CollectionFactory $regionCollectionFactory = null
+        ?\Magento\Directory\Model\ResourceModel\Region\CollectionFactory $regionCollectionFactory = null
     ) {
         $this->fixtureManager = $sampleDataContext->getFixtureManager();
         $this->csvReader = $sampleDataContext->getCsvReader();

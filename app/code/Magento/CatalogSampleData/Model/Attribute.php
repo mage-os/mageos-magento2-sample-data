@@ -108,7 +108,7 @@ class Attribute
             foreach ($rows as $row) {
                 $data = [];
                 foreach ($row as $key => $value) {
-                    $data[$header[$key]] = trim($value);
+                    $data[$header[$key]] = trim($value ?? '');
                 }
                 $data['attribute_set'] = explode("\n", $data['attribute_set']);
 
@@ -144,7 +144,7 @@ class Attribute
 
                 if (is_array($data['attribute_set'])) {
                     foreach ($data['attribute_set'] as $setName) {
-                        $setName = trim($setName);
+                        $setName = trim($setName ?? '');
                         $attributeCount++;
                         $attributeSet = $this->processAttributeSet($setName);
                         $attributeGroupId = $attributeSet->getDefaultGroupId();
@@ -171,7 +171,7 @@ class Attribute
     protected function getOption($attribute, $data)
     {
         $result = [];
-        $data['option'] = explode("\n", $data['option']);
+        $data['option'] = explode("\n", $data['option'] ?? '');
         /** @var \Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\Collection $options */
         $options = $this->attrOptionCollectionFactory->create()
             ->setAttributeFilter($attribute->getId())

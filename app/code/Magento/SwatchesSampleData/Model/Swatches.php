@@ -126,7 +126,8 @@ class Swatches
     {
         $optionSwatch = ['value' => []];
         foreach ($attributeData['option'] as $optionKey => $optionValue) {
-            if (substr($optionValue, 0, 1) == '#' && strlen($optionValue) == 7) {
+            if ($optionValue !== null && substr($optionValue, 0, 1) == '#'
+                && strlen($optionValue) == 7) {
                 $optionSwatch['value'][$optionKey] = $optionValue;
             } else if (!empty($this->colorMap[$optionValue])) {
                 $optionSwatch['value'][$optionKey] = $this->colorMap[$optionValue];
