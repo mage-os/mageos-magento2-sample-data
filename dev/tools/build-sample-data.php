@@ -19,7 +19,7 @@ $ceSource = !empty($options['ce-source'])
 $sampleDataSource = !empty($options['sample-data-source'])
     ? realpath($options['sample-data-source'])
     : realpath(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
-$isExclude = !empty($options['exclude']) ? (boolean)$options['exclude'] : false;
+$isExclude = !empty($options['exclude']) ? (bool)$options['exclude'] : false;
 $excludeFile = $ceSource . DIRECTORY_SEPARATOR . '.git' . DIRECTORY_SEPARATOR . 'info' . DIRECTORY_SEPARATOR . 'exclude';
 
 if (isset($options['help'])) {
