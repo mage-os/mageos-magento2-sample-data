@@ -1,25 +1,29 @@
 {
-    "name": "magento/module-offline-shipping-sample-data",
-    "description": "N/A",
-    "require": {
-        "php": "~8.3.0||~8.4.0||~8.5.0",
-        "magento/framework": "*",
-        "magento/module-offline-shipping": "*",
-        "magento/module-directory": "*",
-        "magento/module-config": "*",
-        "magento/module-store": "*"
-    },
-    "type": "magento2-module",
-    "license": [
-        "OSL-3.0",
-        "AFL-3.0"
+  "name": "mage-os/module-offline-shipping-sample-data",
+  "description": "N/A",
+  "require": {
+    "php": "~8.3.0||~8.4.0||~8.5.0",
+    "mage-os/framework": "3.0.0",
+    "mage-os/module-offline-shipping": "3.0.0",
+    "mage-os/module-directory": "3.0.0",
+    "mage-os/module-config": "3.0.0",
+    "mage-os/module-store": "3.0.0"
+  },
+  "type": "magento2-module",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
     ],
-    "autoload": {
-        "files": [
-            "registration.php"
-        ],
-        "psr-4": {
-            "Magento\\OfflineShippingSampleData\\": ""
-        }
+    "psr-4": {
+      "Magento\\OfflineShippingSampleData\\": ""
     }
+  },
+  "version": "3.0.0",
+  "replace": {
+    "magento/module-offline-shipping-sample-data": "100.4.5"
+  }
 }
